@@ -11,24 +11,25 @@
   line-height: 30px;
   margin: 20px 0;
   transition: 0.5s;
+  color: black;
 }
 .blog h1:hover {
-  color: #1eb2a6;
+  color: darkblue;
   cursor: pointer;
 }
 .blog span {
   text-transform: uppercase;
   font-weight: 500;
-  color: #1eb2a6;
+  color: darkblue;
 }
 .blog span label {
   margin-left: 10px;
-  color: grey;
+  color: rgb(74, 68, 68);
   font-size: 14px;
 }
 .blog span:nth-last-child(1) label {
-  color: #1eb2a6;
+  color: darkblue;
 }
 .blog p {
-  color: grey;
+  color: rgb(74, 68, 68);
 }

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-// import Navbar from "./components/navbar/navbar";
+
 import { RiFileCopyLine } from "react-icons/ri";
+import CustomNavbar from "../../components/navbar/navbar";
+import "./ncllexGPT.css";
 
 const NcllexGPT = () => {
   const [value, setValue] = useState("");
@@ -44,6 +46,20 @@ const NcllexGPT = () => {
       console.error(error);
     }
   };
+
+  // overflow hidden
+
+  useEffect(() => {
+    // Apply the no-overflow class to the body when the component mounts
+    document.body.classList.add("no-overflow");
+
+    // Cleanup function to remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("no-overflow");
+    };
+  }, []);
+
+  // ov
   useEffect(() => {
     // console.log(currentTitle, value, message);
     if (!currentTitle && value && message) {
@@ -95,8 +111,8 @@ const NcllexGPT = () => {
   };
 
   return (
-    <div>
-      {/* <Navbar /> */}
+    <div className="no-overflow">
+      <CustomNavbar />
       <div className="app">
         <section className="side-bar">
           <button className="button-sidebar" onClick={createNewChat}>
@@ -114,7 +130,11 @@ const NcllexGPT = () => {
           </nav>
         </section>
         <section className="main">
-          {!currentTitle && <h1>NcllexGPT</h1>}
+          {/* added this div for flexing span and h1 */}
+          <div>
+            {!currentTitle && <h1>NcllexGPT</h1>}
+            <span>Nursing College Exam GPT</span>
+          </div>
           <ul className="feed">
             {currentChat?.map((chatMessage, index) => (
               <li key={index}>

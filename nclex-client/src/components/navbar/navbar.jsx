@@ -14,7 +14,7 @@ const CustomNavbar = () => {
     <div className={`navbar ${menuActive ? "active" : ""}`}>
       <div className="brand">
         <img src="/logo192.png" width="40px" height="40px" alt="Logo" />
-        NcllexGPT
+        <h1>NcllexGPT</h1>
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>

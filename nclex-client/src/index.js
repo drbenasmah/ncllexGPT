@@ -11,9 +11,9 @@ import Footer from "./components/footer/footer";
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <CustomNavbar />
+      {/* <CustomNavbar /> */}
       <App />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </React.StrictMode>,
   document.getElementById("root")

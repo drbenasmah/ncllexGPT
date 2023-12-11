@@ -1,11 +1,15 @@
 .price .items {
   padding: 40px;
   text-align: center;
+  color: darkblue;
 }
 .price h1 {
   font-size: 50px;
   margin: 20px 0;
-  color: #1eb2a6;
+  color: darkblue;
+}
+.price h4 {
+  color: black;
 }
 .price h1 span {
   font-size: 20px;
@@ -13,7 +17,7 @@
   color: #000;
 }
 .price p {
-  color: grey;
+  color: rgb(74, 68, 68);
   margin: 40px 0;
 }
 /*--------------faq-------------*/
@@ -40,7 +44,7 @@
   padding: 20px;
 }
 .faq .accordion:hover {
-  background-color: #1eb2a6;
+  background-color: darkblu;
   color: #fff;
 }
 

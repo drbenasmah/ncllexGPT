@@ -8,6 +8,7 @@ import Testimonal from "./testimonal/Testimonal";
 // import "../home/App.css";
 import Head from "../common/header/Head";
 import Header from "../common/header/Header";
+import Footer from "../common/web-footer/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonal />
       <Hblog />
       <Hprice />
+      <Footer />
     </>
   );
 };

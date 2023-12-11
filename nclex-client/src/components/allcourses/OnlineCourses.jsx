@@ -12,7 +12,7 @@ const OnlineCourses = () => {
           <div className="content grid3">
             {online.map((val) => (
               <div className="box">
-                <div className="img">
+                <div style={{ color: "#3498db" }} className="img">
                   <img src={val.cover} />
                   <img src={val.hoverCover} alt="" className="show" />
                 </div>

@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 body {
   margin: 0;
+  /* color: #ffffff; */
+  padding: 0;
 }
 
 ul {
@@ -8,13 +11,7 @@ ul {
   padding: 0;
 }
 
-main {
-  margin: 2rem auto;
-  text-align: center;
-}
-
 /* ncllexGPT css */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 * {
   color: #ffffff; /* White for text */
@@ -27,176 +24,3 @@ html {
   font-variation-settings: normal;
   /* background-color: #287c9d; */
 }
-/* Add this to your global styles, e.g., App.css or index.css */
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.app {
-  background-color: #287c9d; /* Light blue for the app background */
-  display: flex;
-}
-
-.side-bar {
-  background-color: #3104a1; /* Darker blue for the sidebar */
-  height: 90vh;
-  width: 244px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.side-bar .button-sidebar {
-  border: solid 0.5px rgba(255, 255, 255, 0.5); /* White border */
-  background-color: transparent;
-  border-radius: 5px;
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.side-bar .button-sidebar:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Light blue on hover */
-}
-
-nav {
-  border-top: solid 0.5px rgba(236, 225, 225, 0.5); /* White border */
-  padding: 10px;
-  margin: 10px;
-}
-
-.history {
-  overflow: scroll;
-  padding: 10px;
-  margin: 10px;
-  height: 100%;
-}
-
-.history li {
-  list-style-type: none;
-  padding: 15px 0;
-  cursor: pointer;
-}
-
-.main {
-  overflow: scroll;
-
-  height: 90vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.info {
-  color: rgba(255, 255, 255, 0.7); /* Lighter white text */
-  font-size: 11px;
-  padding: 10px;
-}
-
-.bottom-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.input-container {
-  position: relative;
-  width: 90%;
-  /* max-width: 650px; */
-}
-
-input {
-  width: 100%;
-  border: none;
-  font-size: 20px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Light blue with opacity for input background */
-  padding: 12px 15px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px, rgba(0, 0, 0, 0.05) 0 -12px 30px,
-    rgba(0, 0, 0, 0.05) 0 4px 6px, rgba(0, 0, 0, 0.05) 0 12px 3px,
-    rgba(0, 0, 0, 0.05) 0 -3px 5px;
-}
-
-input:focus {
-  outline: none;
-}
-
-input::placeholder {
-  color: #999;
-}
-
-#submit {
-  position: absolute;
-  bottom: 15px;
-  right: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Add a smooth transition effect */
-}
-
-#submit:hover {
-  background-color: rgba(14, 14, 168, 0.372); /* Light blue on hover */
-}
-
-.feed {
-  overflow: scroll;
-
-  width: 90%;
-  padding: 0;
-}
-
-.feed li {
-  overflow-y: auto;
-  box-sizing: border-box; /* Include padding and borders in the total width */
-  display: flex;
-  background-color: #155c79;
-  width: 100%;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.feed p {
-  color: rgba(236, 225, 225, 0.8);
-  font-size: 14px;
-  text-align: left;
-  margin-right: 5vw;
-}
-
-.feed p.role {
-  min-width: 100px;
-}
-
-.message-container {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-}
-
-.content-container {
-  position: relative;
-}
-
-.copy-icon {
-  cursor: pointer;
-  color: #4caf50;
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* Adjust margin if needed, margin: 5px; */
-}
-
-/* NEW CSS */

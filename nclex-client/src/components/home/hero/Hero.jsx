@@ -9,8 +9,8 @@ const Hero = () => {
         <div className="container">
           <div className="row">
             <Heading
-              subtitle="WELCOME TO NCLLEX"
-              title="Your AI Teacher and Study Buddy"
+              subtitle="WELCOME TO NCLLEXGPT"
+              title="Your nclex AI Teacher and Study Buddy"
             />
             <p>
               Trained on all nursing resources for personalized answers and
