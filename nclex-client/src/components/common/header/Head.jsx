@@ -5,7 +5,9 @@ const Head = () => {
     <>
       <section className="head">
         <div className="container flexSB">
-          <img src="/logo192.png" width="80px" height="80px" alt="Logo" />
+          {/* <div className="logo-img">
+            <img src="/logo192.png" width="80px" height="80px" alt="Logo" />
+          </div> */}
           <div className="logo">
             <h1>NCLLEXGPT</h1>
             <span>Nursing College Exam GPT</span>

@@ -19,12 +19,12 @@ const Footer = () => {
       </section>
       <footer>
         <div className="container padding">
-          <div className="box logo">
-            <h1>ACADEMIA</h1>
-            <span>ONLINE EDUCATION & LEARNING</span>
+          <div className="box logo-footer">
+            <h1>NCLLEXGPT</h1>
+            <span>Nursing College Exam GPT</span>
             <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia.
+              Trained on all nursing resources for personalized answers and
+              explanations tailored to your learning needs.
             </p>
 
             <i className="fab fa-facebook-f icon"></i>
@@ -92,10 +92,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="legal">
-        <p>
-          Copyright ©2022 All rights reserved | This template is made with{" "}
-          <i className="fa fa-heart"></i> by Benasco
-        </p>
+        <p>Copyright ©2022 All rights reserved | Benasco</p>
       </div>
     </>
   );

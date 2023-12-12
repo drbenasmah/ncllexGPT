@@ -29,14 +29,17 @@
   color: black;
 }
 
-.coursesCard .rate {
+.coursesCard .text .rate {
   margin: 20px 0;
-  /* color: darkblue; */
-  background-color: darkblue;
+  color: darkblue;
 }
 .coursesCard .rate i {
   font-size: 13px;
   margin-right: 5px;
+  color: darkblue;
+}
+.coursesCard .rate label {
+  color: darkblue;
 }
 .coursesCard .details .dimg img {
   width: 50px;
@@ -47,9 +50,11 @@
 .coursesCard .details .box {
   display: flex;
   align-items: center;
+  color: rgb(191, 18, 18);
 
   background-color: darkblue;
 }
+
 .coursesCard .details span {
   color: darkblue;
   font-weight: 500;

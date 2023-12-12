@@ -1,6 +1,8 @@
 import React from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
+import Header from "../common/header/Header";
+import Footer from "../common/web-footer/Footer";
 
 const Contact = () => {
   const map = `
@@ -8,6 +10,7 @@ const Contact = () => {
 `;
   return (
     <>
+      <Header />
       <Back title="Contact us" />
       <section className="contacts padding">
         <div className="container shadow flexSB">
@@ -50,6 +53,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

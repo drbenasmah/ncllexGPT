@@ -5,8 +5,7 @@ import HAbout from "./HAbout";
 import Hero from "./hero/Hero";
 import Hprice from "./Hprice";
 import Testimonal from "./testimonal/Testimonal";
-// import "../home/App.css";
-import Head from "../common/header/Head";
+
 import Header from "../common/header/Header";
 import Footer from "../common/web-footer/Footer";
 

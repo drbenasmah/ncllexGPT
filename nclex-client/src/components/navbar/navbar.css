@@ -19,37 +19,17 @@ code {
   width: 100%; /* Set the width to 100% of the parent container */
   padding: 2px; /* Adjust the padding to control the spacing inside the navbar */
   margin: 0;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between; /* Align items to the far left and far right */
   align-items: center;
-}
-
-/* Apply styles to the Navbar.Brand */
-.navbar-brand img {
-  margin-right: 10px; /* Adjust the margin for spacing between the logo and text */
-  margin-left: 10%;
-}
-.mr-auto {
-  margin-left: auto;
-  margin-right: 10px;
-}
-
-/* Optionally, add more styles as needed for your specific design */
-
-/* chatgpt without links */
-/* navbar.css */
-
-/* navbar.css */
-
-/* Styles for larger screens */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: darkblue;
-  padding: 10px;
+
   color: white;
+}
+
+.brand h1 {
+  font-size: 30px;
 }
 
 .brand {
@@ -102,13 +82,13 @@ code {
 /* Styles for smaller screens (mobile) */
 @media screen and (max-width: 768px) {
   .navbar {
-    flex-direction: row; /* Keep brand, hamburger, and menu in a row for smaller screens */
-    justify-content: space-between; /* Align brand to the right and hamburger to the left */
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
   }
 
   .brand {
-    margin-right: auto; /* Push brand to the right */
+    margin-right: auto;
   }
 
   .hamburger {

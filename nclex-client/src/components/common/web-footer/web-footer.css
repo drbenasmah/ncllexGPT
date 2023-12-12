@@ -43,15 +43,15 @@ footer .container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-footer .logo span {
+footer .logo-footer span {
   color: darkblue;
   font-size: 14px;
 }
-footer .logo p {
+footer .logo-footer p {
   color: rgb(74, 68, 68);
   margin: 30px 0 15px 0;
 }
-footer .logo .icon {
+footer .logo-footer .icon {
   background-color: darkblue;
   color: white;
   margin-right: 10px;

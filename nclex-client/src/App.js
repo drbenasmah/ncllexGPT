@@ -2,8 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorPage from "./pages/Error";
 import NcllexGPT from "./pages/NcllexGPT/NcllexGPT";
-import ProductDetailPage from "./pages/ProductDetail";
-import ProductsPage from "./pages/Products";
+
 import RootLayout from "./pages/Root";
 import Home from "./components/home/Home";
 
@@ -17,14 +16,23 @@ import "./components/web-feat/webApp.css";
 import Header from "./components/common/header/Header";
 import Footer from "./components/common/web-footer/Footer";
 
+// QBank imports
+import QbHeader from "./components/qBank/qB-Header/Qb-Header";
+import QbFooter from "./components/qBank/qB-Footer/Qb-Footer";
+import QbApp from "./pages/QBank/QbApp";
+import Result from "./pages/QBank/Result/Result";
+import Quiz from "./pages/QBank/Quiz/Quiz";
+import { useState } from "react";
+import axios from "axios";
+import QbHome from "./pages/QBank/QbHome/QbHome";
+// import "./pages/QBank/QbApp.css";
+
 const router = createBrowserRouter([
   {
     path: "/",
 
     errorElement: <ErrorPage />,
     children: [
-      { path: "products", element: <ProductsPage /> },
-      { path: "products/:productId", element: <ProductDetailPage /> },
       { path: "home", element: <Home /> },
       { path: "about", element: <About /> },
       { path: "courses", element: <CourseHome /> },
@@ -32,21 +40,36 @@ const router = createBrowserRouter([
       { path: "pricing", element: <Pricing /> },
       { path: "blog", element: <Blog /> },
       { path: "contact", element: <Contact /> },
-      // { path: "about", element: <About /> },
-      // { path: "about", element: <About /> },
+      // { path: "qbank", element: <QbApp /> },
+      { path: "quiz", element: <Quiz /> },
+      { path: "result", element: <Result /> },
+      { path: "qbHome", element: <QbHome /> },
     ],
   },
   { index: true, element: <NcllexGPT /> },
 ]);
 
-// const router = createBrowserRouter(routeDefinitions);
-
 function App() {
+  const [name, setName] = useState("");
+  const fetchQuestions = () => {};
+
   return (
     <RouterProvider router={router}>
-      <Header />
-      {/* Your other components go here */}
-      <Footer />
+      <>
+        <div
+          className="app-qb"
+          style={{ backgroundImage: 'url("/ques1.png")' }}
+        >
+          <QbHeader />
+          <QbHome
+            name={name}
+            setName={setName}
+            fetchQuestions={fetchQuestions}
+          />
+          {/* <Result /> */}
+        </div>
+        <QbFooter />
+      </>
     </RouterProvider>
   );
 }
