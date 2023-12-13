@@ -5,7 +5,7 @@ const QbHeader = () => {
   return (
     <div className="header">
       <Link to="/qbank" className="title">
-        Intuitive Quiz Hub
+        NcllexGPT QBank
       </Link>
       <hr className="divider" />
     </div>

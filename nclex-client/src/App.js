@@ -40,8 +40,8 @@ const router = createBrowserRouter([
       { path: "pricing", element: <Pricing /> },
       { path: "blog", element: <Blog /> },
       { path: "contact", element: <Contact /> },
-      // { path: "qbank", element: <QbApp /> },
-      { path: "quiz", element: <Quiz /> },
+      { path: "qbank", element: <QbApp /> },
+      // { path: "quiz", element: <Quiz /> },
       { path: "result", element: <Result /> },
       { path: "qbHome", element: <QbHome /> },
     ],
@@ -50,25 +50,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [name, setName] = useState("");
-  const fetchQuestions = () => {};
-
   return (
     <RouterProvider router={router}>
       <>
-        <div
-          className="app-qb"
-          style={{ backgroundImage: 'url("/ques1.png")' }}
-        >
-          <QbHeader />
-          <QbHome
-            name={name}
-            setName={setName}
-            fetchQuestions={fetchQuestions}
-          />
-          {/* <Result /> */}
-        </div>
-        <QbFooter />
+        <QbApp />
       </>
     </RouterProvider>
   );

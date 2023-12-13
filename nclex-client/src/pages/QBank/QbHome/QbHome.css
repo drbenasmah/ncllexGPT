@@ -42,3 +42,13 @@
   flex: 0.8;
   justify-content: space-evenly;
 }
+
+/* Add this to your existing QbHome.css file or create a new one */
+.blue-dropdown {
+  color: darkblue;
+}
+
+/* Styling for the dropdown menu */
+.blue-dropdown .MuiMenu-paper {
+  background-color: darkblue;
+}

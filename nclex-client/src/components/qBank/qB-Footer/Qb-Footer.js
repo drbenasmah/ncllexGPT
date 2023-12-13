@@ -11,7 +11,7 @@ const QbFooter = () => {
         href="https://www.youtube.com/roadsidecoder"
         style={{ cursor: "pointer" }}
       >
-        Roadside Coder
+        Benasco
       </a>
     </div>
   );

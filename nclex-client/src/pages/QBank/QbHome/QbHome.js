@@ -19,7 +19,7 @@ const QbHome = ({ name, setName, fetchQuestions }) => {
     } else {
       setError(false);
       fetchQuestions(category, difficulty);
-      navigate.push("/quiz");
+      navigate("/qbank");
     }
   };
 
@@ -42,6 +42,8 @@ const QbHome = ({ name, setName, fetchQuestions }) => {
             onChange={(e) => setCategory(e.target.value)}
             variant="outlined"
             style={{ marginBottom: 30 }}
+            className="blue-dropdown" // Apply the blue-dropdown class here
+            SelectProps={{ MenuProps: { className: "blue-dropdown" } }}
           >
             {Categories.map((cat) => (
               <MenuItem key={cat.category} value={cat.value}>
@@ -56,6 +58,8 @@ const QbHome = ({ name, setName, fetchQuestions }) => {
             onChange={(e) => setDifficulty(e.target.value)}
             variant="outlined"
             style={{ marginBottom: 30 }}
+            className="blue-dropdown" // Apply the blue-dropdown class here
+            SelectProps={{ MenuProps: { className: "blue-dropdown" } }}
           >
             <MenuItem key="Easy" value="easy">
               Easy
