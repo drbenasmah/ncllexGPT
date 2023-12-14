@@ -7,10 +7,7 @@ const QbFooter = () => {
       }}
     >
       Made with ♥ by{" "}
-      <a
-        href="https://www.youtube.com/roadsidecoder"
-        style={{ cursor: "pointer" }}
-      >
+      <a href="https://twitter.com/AsmahPapa" style={{ cursor: "pointer" }}>
         Benasco
       </a>
     </div>

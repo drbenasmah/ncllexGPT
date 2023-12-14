@@ -71,7 +71,7 @@ const Question = ({
             color="secondary"
             size="large"
             style={{ width: 185 }}
-            href="/"
+            href="/qbank"
             onClick={() => handleQuit()}
           >
             Quit

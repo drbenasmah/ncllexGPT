@@ -1,24 +1,20 @@
-import { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import "./Quiz.css";
-import { CircularProgress } from "@mui/material";
 import Question from "../../../components/qBank/Question/Question";
+import { CircularProgress } from "@mui/material";
 
 const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
 
   useEffect(() => {
-    console.log("Quiz component mounted");
-    if (questions && questions.length > 0) {
-      console.log("Questions in Quiz:", questions);
-      setOptions(
+    setOptions(
+      questions &&
         handleShuffle([
           questions[currQues]?.correct_answer,
           ...questions[currQues]?.incorrect_answers,
         ])
-      );
-    }
+    );
   }, [currQues, questions]);
 
   console.log(questions);

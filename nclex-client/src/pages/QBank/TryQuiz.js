@@ -8,10 +8,9 @@ import axios from "axios";
 import Quiz from "./Quiz/Quiz";
 import Result from "./Result/Result";
 import Footer from "../../components/footer/footer";
-import Header from "../../components/common/header/Header";
 import CustomNavbar from "../../components/navbar/navbar";
 
-function QbApp() {
+function TryQuiz() {
   const [questions, setQuestions] = useState([]);
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
@@ -52,32 +51,23 @@ function QbApp() {
   console.log("Outside useEffect - Questions:", questions);
   return (
     <>
-      <div className="fixed-page">
-        <CustomNavbar />
-        <div className="app-qb" style={{ backgroundImage: 'url("/ques.png")' }}>
-          <QbHeader />
-          <QbHome
+      <CustomNavbar />
+      <div className="app-qb" style={{ backgroundImage: 'url("/ques.png")' }}>
+        <QbHeader />
+
+        {questions.length > 0 && (
+          <Quiz
             name={name}
-            setName={setName}
-            fetchQuestions={fetchQuestions}
+            questions={questions}
+            score={score}
+            setScore={setScore}
+            setQuestions={setQuestions}
           />
-          {/* <section>
-          {questions.length > 0 && (
-            <Quiz
-              name={name}
-              questions={questions}
-              score={score}
-              setScore={setScore}
-              setQuestions={setQuestions}
-            />
-          )}
-        </section> */}
-          {/* <Result name={name} score={score} /> */}
-        </div>
-        <Footer />
+        )}
       </div>
+      <Footer />
     </>
   );
 }
 
-export default QbApp;
+export default TryQuiz;

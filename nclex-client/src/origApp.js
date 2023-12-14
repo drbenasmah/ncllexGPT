@@ -1,4 +1,11 @@
-import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
+// try
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
 
 import ErrorPage from "./pages/Error";
 import NcllexGPT from "./pages/NcllexGPT/NcllexGPT";
@@ -28,29 +35,6 @@ import QbHome from "./pages/QBank/QbHome/QbHome";
 import TryQuiz from "./pages/QBank/TryQuiz";
 // import "./pages/QBank/QbApp.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-
-    errorElement: <ErrorPage />,
-    children: [
-      { path: "home", element: <Home /> },
-      { path: "about", element: <About /> },
-      { path: "courses", element: <CourseHome /> },
-      { path: "team", element: <Team /> },
-      { path: "pricing", element: <Pricing /> },
-      { path: "blog", element: <Blog /> },
-      { path: "contact", element: <Contact /> },
-      { path: "qbank", element: <QbApp /> },
-      { path: "quiz", element: <Quiz /> },
-      { path: "result", element: <Result /> },
-      { path: "qbHome", element: <QbHome /> },
-      { path: "tryquiz", element: <TryQuiz /> },
-    ],
-  },
-  { index: true, element: <NcllexGPT /> },
-]);
-
 function App() {
   const [questions, setQuestions] = useState();
   const [name, setName] = useState();
@@ -66,12 +50,38 @@ function App() {
     setQuestions(data.results);
   };
   return (
-    <RouterProvider router={router}>
-      <>
-        <Route path="/quiz"></Route>
-        {/* <Route path="/tryquiz" element={<TryQuiz />} /> */}
-      </>
-    </RouterProvider>
+    <BrowserRouter>
+      {/* <div className="app" style={{ backgroundImage: 'url("/ques1.png")' }}> */}
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<CourseHome />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* Uncomment the lines below to include these routes */}
+        <Route path="/qbank" element={<QbApp />} />
+        <Route
+          path="/quiz"
+          element={
+            <Quiz
+              name={name}
+              questions={questions}
+              score={score}
+              setScore={setScore}
+              setQuestions={setQuestions}
+            />
+          }
+        />
+        <Route path="/result" element={<Result />} />
+        <Route path="/qbHome" element={<QbHome />} />
+        <Route path="/tryquiz" element={<TryQuiz />} />
+      </Routes>
+      {/* </div> */}
+      <Footer />
+    </BrowserRouter>
   );
 }
 
