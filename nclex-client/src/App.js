@@ -27,6 +27,9 @@ import axios from "axios";
 import QbHome from "./pages/QBank/QbHome/QbHome";
 import TryQuiz from "./pages/QBank/TryQuiz";
 // import "./pages/QBank/QbApp.css";
+import FlashcardApp from "./pages/Flashcard/FlashApp";
+
+// import "./pages/QBank/QbApp.css";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +49,7 @@ const router = createBrowserRouter([
       { path: "result", element: <Result /> },
       { path: "qbHome", element: <QbHome /> },
       { path: "tryquiz", element: <TryQuiz /> },
+      { path: "flashcard", element: <FlashcardApp /> },
     ],
   },
   { index: true, element: <NcllexGPT /> },
