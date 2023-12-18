@@ -16,7 +16,10 @@ const Header = () => {
             onClick={() => setClick(false)}
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">NcllexGPT</Link>
+            </li>
+            <li>
+              <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/courses">All Courses</Link>
@@ -36,9 +39,17 @@ const Header = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
+            <li>
+              <Link to="/qbank">QBank</Link>
+            </li>
+            <li>
+              <Link to="/flashcard">Flash Card</Link>
+            </li>
           </ul>
           <div className="start">
-            <div className="button">GET CERTIFICATE</div>
+            <div className="button">
+              <Link to="/">Chat with NcllexGPT</Link>
+            </div>
           </div>
           <button className="toggle" onClick={() => setClick(!click)}>
             {click ? (

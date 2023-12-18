@@ -7,14 +7,24 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
 
+  // useEffect(() => {
+  //   setOptions(
+  //     questions &&
+  //       handleShuffle([
+  //         questions[currQues]?.correct_answer,
+  //         ...questions[currQues]?.incorrect_answers,
+  //       ])
+  //   );
+  // }, [currQues, questions]);
   useEffect(() => {
-    setOptions(
-      questions &&
+    if (questions && questions[currQues]) {
+      setOptions(
         handleShuffle([
           questions[currQues]?.correct_answer,
           ...questions[currQues]?.incorrect_answers,
         ])
-    );
+      );
+    }
   }, [currQues, questions]);
 
   console.log(questions);

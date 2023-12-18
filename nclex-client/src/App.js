@@ -29,6 +29,7 @@ import TryQuiz from "./pages/QBank/TryQuiz";
 // import "./pages/QBank/QbApp.css";
 
 import StickerFlashCardApp from "./Sticker-Flashcard/src/StickerFlashCardApp";
+import QuesBankHome from "./pages/Reactjs-Quiz-App/src/Pages/Home/Home";
 
 // import "./pages/QBank/QbApp.css";
 
@@ -45,12 +46,15 @@ const router = createBrowserRouter([
       { path: "pricing", element: <Pricing /> },
       { path: "blog", element: <Blog /> },
       { path: "contact", element: <Contact /> },
-      { path: "qbank", element: <QbApp /> },
-      { path: "quiz", element: <Quiz /> },
-      { path: "result", element: <Result /> },
-      { path: "qbHome", element: <QbHome /> },
-      { path: "tryquiz", element: <TryQuiz /> },
-      { path: "stickerflashcard", element: <StickerFlashCardApp /> },
+      // { path: "qbank", element: <QbApp /> },
+      // { path: "quiz", element: <Quiz /> },
+      // { path: "result", element: <Result /> },
+      // { path: "qbHome", element: <QbHome /> },
+      // { path: "tryquiz", element: <TryQuiz /> },
+      { path: "flashcard", element: <StickerFlashCardApp /> },
+      { path: "quesbankhome", element: <QuesBankHome /> },
+      { path: "blog", element: <Blog /> },
+      { path: "blog", element: <Blog /> },
     ],
   },
   { index: true, element: <NcllexGPT /> },

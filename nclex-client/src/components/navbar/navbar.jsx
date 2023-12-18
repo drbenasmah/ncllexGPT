@@ -1,6 +1,6 @@
 // CustomNavbar.jsx
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 
 const CustomNavbar = () => {
@@ -25,7 +25,11 @@ const CustomNavbar = () => {
 
       <div className={`menu ${menuActive ? "active" : ""}`}>
         {/* Your menu items */}
-        <span>Home</span>
+        <span>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+        </span>
 
         <div className="dropdown">
           <span>
@@ -34,18 +38,31 @@ const CustomNavbar = () => {
           </span>
           {/* Dropdown content */}
           <div className="dropdown-content">
-            <li>fc</li>
-            <li>Quiz</li>
-            <li>qbank</li>
+            <li>
+              <Link to="/qbank">QBank</Link>
+            </li>
+            <li>
+              <Link to="/flashcard">FlashCard</Link>
+            </li>
+            <li>
+              <Link to="/">Jobs</Link>
+            </li>
           </div>
         </div>
 
-        <span>Blog</span>
         <span>
-          {" "}
-          <a href="/products">About Us</a>{" "}
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
         </span>
-        <span>Contact Us</span>
+        <span>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+        </span>
+        <li>
+          <Link to="/contact">Contact Us</Link>
+        </li>
       </div>
     </div>
   );
