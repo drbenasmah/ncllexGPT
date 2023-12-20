@@ -39,7 +39,7 @@ const CustomNavbar = () => {
           {/* Dropdown content */}
           <div className="dropdown-content">
             <li>
-              <Link to="/qbank">QBank</Link>
+              <Link to="/quiz">QBank</Link>
             </li>
             <li>
               <Link to="/flashcard">FlashCard</Link>
